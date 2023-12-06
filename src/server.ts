@@ -29,15 +29,15 @@ const server = http.createServer((req, res) => {
         return respondWithDate(res, resultDate);
     }
 
-    if (pathname === "/sub-days-from-12-jan-2019" && query.fromDate) {
+    if (pathname === "/sub-days-from-12-jan-2019") {
         const daysToSubtract = getQueryParam("days", 187);
-        const fromDate = query.Date
+        const fromDate = query.fromDate
             ? parseDate(
                   query.fromDate as string,
                   "yyyy-MM-dd",
                   new Date(2019, 1, 12)
               )
-            : new Date(2019, 1, 12);
+            : new Date(2019, 1, 12); // Use default value if query.fromDate is not provided
 
         const resultDate = subDays(fromDate, daysToSubtract);
         return respondWithDate(res, resultDate);
