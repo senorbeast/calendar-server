@@ -30,7 +30,7 @@ This is a simple Node.js TypeScript server that provides calendar-related functi
 Run both server and swagger-
 
 Server:    <http://localhost:3000/>
-Swagger UI:<http://localhost:8080/>
+Swagger UI docs:<http://localhost:3000/api-docs>
 
 ```bash
 docker-compose build
