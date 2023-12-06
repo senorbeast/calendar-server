@@ -44,7 +44,7 @@ fs.writeFileSync(swaggerJsonPath, JSON.stringify(swaggerSpec, null, 2));
  *       '200':
  *         description: Successfully added days.
  *         content:
- *           application/json:
+ *           text/plain:
  *             example: "2023-12-08"
  */
 
@@ -63,7 +63,7 @@ fs.writeFileSync(swaggerJsonPath, JSON.stringify(swaggerSpec, null, 2));
  *       '200':
  *         description: Successfully added weeks.
  *         content:
- *           application/json:
+ *           text/plain:
  *             example: "2023-12-15"
  */
 
@@ -83,12 +83,12 @@ fs.writeFileSync(swaggerJsonPath, JSON.stringify(swaggerSpec, null, 2));
  *         schema:
  *           type: string
  *           format: date
- *         description: Date to 187 subtract days.
+ *         description: Date to subtract days.
  *     responses:
  *       '200':
  *         description: Successfully subtracted days.
  *         content:
- *           application/json:
+ *           text/plain:
  *             example: "2018-07-09"
  */
 
