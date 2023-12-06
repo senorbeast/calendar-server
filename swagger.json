@@ -1,0 +1,96 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Your API Title",
+    "version": "1.0.0",
+    "description": "Your API Description"
+  },
+  "paths": {
+    "/add-days": {
+      "get": {
+        "summary": "Add days to the current date.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "days",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Number of days to add."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully added days.",
+            "content": {
+              "application/json": {
+                "example": "2023-12-08"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/add-weeks": {
+      "get": {
+        "summary": "Add weeks to the current date.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "weeks",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Number of weeks to add."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully added weeks.",
+            "content": {
+              "application/json": {
+                "example": "2023-12-15"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sub-days-from-12-jan-2019": {
+      "get": {
+        "summary": "Subtract days from a specific date (12 Jan 2019).",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "days",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "Number of days to subtract."
+          },
+          {
+            "in": "query",
+            "name": "fromDate",
+            "schema": {
+              "type": "string",
+              "format": "date"
+            },
+            "description": "Date to 187 subtract days."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully subtracted days.",
+            "content": {
+              "application/json": {
+                "example": "2018-07-09"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}

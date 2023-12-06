@@ -1,0 +1,8 @@
+# Use an official Swagger UI image as a parent image
+FROM swaggerapi/swagger-ui
+
+# Set the URL for Swagger JSON
+ENV SWAGGER_JSON /api-docs
+
+# Expose the port for Swagger UI
+EXPOSE 8080

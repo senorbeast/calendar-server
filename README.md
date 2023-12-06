@@ -1,10 +1,9 @@
-# Calender Server
 
-# Calendar API Server
+# Calendar Server
 
 This is a simple Node.js TypeScript server that provides calendar-related functionality through HTTP endpoints.
 
-## Endpoints
+## REST HTTP GET Endpoints
 
 ### 1. Add Days to Today
 
@@ -25,6 +24,20 @@ This is a simple Node.js TypeScript server that provides calendar-related functi
 - **Behavior with Params:** Subtracts the specified number of days from the provided date (default: January 12, 2019).
 
 ## How to Run
+
+### With docker
+
+Run both server and swagger-
+
+Server:    <http://localhost:3000/>
+Swagger UI:<http://localhost:8080/>
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+Run dev server
 
 ```bash
 npm install # Install dependencies
